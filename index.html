@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Gerade noch Silber – Kathrin & Ruben">
+<meta property="og:description" content="Silvester 2026 ab 20 Uhr in Hannover. Bitte bis 12.12. anmelden.">
+<meta property="og:image" content="bild-klein.jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gerade noch Silber</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE: warm, verschmitzt, eine Einladung unter Freunden
+   IDEA: eine Buntstift-Einladungskarte, die über der Zeichnung liegt
+   PICTURE: die Buntstiftzeichnung von Kathrin und Ruben an der Gracht, randlos
+   COLOUR and TYPE: Ballon-Gelb, Ballon-Blau, Silber als Akzent; Caveat + Nunito
+   LAYOUT: Bild füllt den Schirm, Karte rechts (Desktop) bzw. unter dem Bild (Handy) */
+:root{color-scheme:light dark;
+  --paper:light-dark(#fffdf6,#1b2140);--ink:light-dark(#1d2340,#f3f1e8);--soft:light-dark(#4b5170,#c4c7d8);
+  --blue:#2343a8;--yellow:#f4d63a;--silver:light-dark(#8e96a8,#c9d0dc);--line:light-dark(#e6e1cf,#2f3760)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0}
+body{color:var(--ink);font:16px/1.55 Nunito,system-ui,sans-serif;overflow-x:clip;background:#6d7f5a}
+.bg{position:fixed;inset:0;z-index:-1;background:url(bild.jpg) 18% 30%/cover no-repeat}
+.wrap{min-height:100vh;padding:0}
+.pic{display:none}
+@media(min-width:761px){
+  body{background:#f1ede1;background-image:repeating-linear-gradient(-38deg,rgba(60,70,90,.035) 0 1px,transparent 1px 7px)}
+  :root[data-theme=dark] body{background-color:#151a33}
+  .bg{display:none}
+  .wrap{display:grid;grid-template-columns:minmax(0,auto) minmax(380px,520px);justify-content:center;align-items:start;gap:clamp(20px,4vw,64px);max-width:1400px;margin:0 auto;padding:0 clamp(16px,3vw,48px) 0 0}
+  .pic{display:block;position:sticky;top:0;height:100vh;max-width:62vw;aspect-ratio:3/4;object-fit:cover;object-position:30% 50%;
+    -webkit-mask-image:linear-gradient(to right,transparent,#000 7%,#000 88%,transparent);mask-image:linear-gradient(to right,transparent,#000 7%,#000 88%,transparent)}
+  .card{margin:clamp(24px,6vh,64px) 0}
+}
+.card{width:min(500px,100%);background:var(--paper);border-radius:6px;padding:clamp(22px,3vw,34px);
+  box-shadow:0 2px 0 var(--line),0 18px 50px rgba(10,20,40,.35);transform:rotate(.6deg);position:relative}
+.card::before{content:"";position:absolute;top:-12px;left:50%;width:110px;height:26px;margin-left:-55px;
+  background:rgba(244,214,58,.75);transform:rotate(-3deg);border-radius:2px}
+h1{font:700 clamp(40px,6vw,54px)/1.0 Caveat,cursive;margin:6px 0 4px;text-wrap:balance}
+.silver{background:linear-gradient(100deg,#4f5767 0%,#a9b1bf 30%,#5d6575 50%,#c3cad5 70%,#4f5767 100%);
+  background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
+@keyframes shine{to{background-position:-220% 0}}
+.sub{font:600 26px/1.1 Caveat,cursive;color:var(--blue);margin:0 0 16px}
+:root[data-theme=dark] .sub{color:#8fa6ff}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .sub{color:#8fa6ff}}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:0 0 14px;padding:12px 0;border-block:2px dashed var(--line)}
+.facts dt{font-weight:800}.facts dd{margin:0}
+p{margin:0 0 12px}.small{font-size:14px;color:var(--soft)}
+h2{font:700 30px/1.1 Caveat,cursive;margin:22px 0 8px}
+.btns{position:relative;display:flex;gap:12px;flex-wrap:wrap;min-height:120px;margin:8px 0 4px;align-items:flex-start}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;
+  font:800 16px Nunito,sans-serif;text-decoration:none;border:2px solid var(--blue);cursor:pointer;transition:transform .25s ease}
+.btn:focus-visible,input:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+.yes{background:var(--blue);color:#fff}.yes:hover{transform:translateY(-2px)}
+.no{background:transparent;color:var(--ink);border-color:var(--silver);position:relative;z-index:2}
+.board{list-style:none;padding:0;margin:0 0 10px;display:grid;gap:6px}
+.board li{display:grid;grid-template-columns:9.5em 1fr auto;gap:10px;align-items:center;font-size:15px}
+.bar{height:12px;border-radius:6px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;background:repeating-linear-gradient(-45deg,var(--yellow) 0 6px,#e8c62a 6px 9px);border-radius:6px}
+.sign{font:700 26px/1.3 Caveat,cursive}
+.n{font-variant-numeric:tabular-nums;font-weight:800;text-align:right;min-width:1.5em}
+label{font-weight:800;display:block;margin:12px 0 6px}
+input{width:100%;min-height:48px;padding:10px 14px;border-radius:10px;border:2px solid var(--line);background:transparent;color:var(--ink);font:16px Nunito,sans-serif}
+.verdict{min-height:3em;margin:8px 0 0;font:600 22px/1.2 Caveat,cursive;color:var(--blue)}
+:root[data-theme=dark] .verdict{color:#8fa6ff}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .verdict{color:#8fa6ff}}
+.stand{font-size:13px;color:var(--soft)}
+@media(max-width:760px){
+  .facts{grid-template-columns:1fr}.facts dd{margin-bottom:6px}
+  .card{margin:78vh 10px 24px;width:auto;transform:none}
+  .board li{grid-template-columns:7.5em 1fr auto}
+}
+@media(prefers-reduced-motion:reduce){.silver{animation:none}.btn{transition:none}}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+<main class="wrap">
+<img class="pic" src="bild.jpg" alt="Buntstiftzeichnung: Kathrin und Ruben mit gelben und blauen Ballons an einer Amsterdamer Gracht">
+<article class="card">
+  <h1><span class="silver">Gerade noch Silber.</span></h1>
+  <p class="sub">25 Jahre – 364 Tage.</p>
+  <p>An Neujahr sind wir 26 Jahre zusammen. Bevor das Silber offiziell abläuft, feiern wir den letzten Abend unseres Silberjahres – und den Jahreswechsel gleich mit. Am liebsten mit euch.<br><span class="sign">Kathrin und Ruben</span></p>
+  <dl class="facts">
+    <dt>Wann</dt><dd>Donnerstag, 31.12.2026, ab 20 Uhr</dd>
+    <dt>Wo</dt><dd>Hannover-Südstadt – die genaue Adresse bekommst du nach deiner Zusage</dd>
+    <dt>Anmelden bis</dt><dd>Samstag, 12.12.2026</dd>
+    <dt>Statt Geschenken</dt><dd>bringt jede und jeder etwas fürs gemeinsame Buffet mit</dd>
+  </dl>
+
+  <h2>Kommst du?</h2>
+  <div class="btns" id="btns">
+    <a class="btn yes" id="yes" href="https://tally.so/r/o92dZV">Ja, ich bin dabei!</a>
+    <a class="btn no" id="no" href="https://tally.so/r/o92dZV">Nein</a>
+  </div>
+  <p class="small">Beide Knöpfe führen zum Anmeldeformular – dort trägst du Personenzahl und Buffet-Beitrag ein.</p>
+
+  <h2>Was schon aufs Buffet kommt</h2>
+  <ul class="board" id="board"></ul>
+  <p class="stand" id="stand"></p>
+
+  <label for="idea">Was willst du mitbringen? Erst mal prüfen:</label>
+  <input id="idea" type="text" autocomplete="off" placeholder="z. B. Kartoffelsalat">
+  <p class="verdict" id="verdict" aria-live="polite"></p>
+</article>
+</main>
+<script>
+{
+let STAND = "", BUFFET = [];
+const KATS = ["Salat","Hauptgericht","Fingerfood & Snacks","Brot & Dips","Nachtisch","Getränke"];
+const board = document.getElementById("board");
+const count = k => BUFFET.filter(b => b.kat === k).length;
+function render() {
+const max = Math.max(3, ...KATS.map(count));
+board.innerHTML = KATS.map(k => {
+  const n = count(k);
+  return `<li><span>${k}</span><span class="bar"><i style="width:${n / max * 100}%"></i></span><span class="n">${n}</span></li>`;
+}).join("");
+document.getElementById("stand").textContent = BUFFET.length
+  ? `Stand: ${STAND || "gerade eben"} · ${BUFFET.length} Beiträge`
+  : `Noch ist das Buffet leer – du kannst den Ton angeben.`;
+
+}
+render();
+fetch("buffet.json", {cache: "no-store"}).then(r => r.ok ? r.json() : null).then(d => {
+  if (d && Array.isArray(d.buffet)) { BUFFET = d.buffet; STAND = d.stand || ""; render(); }
+}).catch(() => {});
+/* Buffet-Wächter */
+const norm = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
+const leastKat = () => KATS.slice().sort((a, b) => count(a) - count(b))[0];
+const idea = document.getElementById("idea"), verdict = document.getElementById("verdict");
+let t;
+idea.addEventListener("input", () => {
+  clearTimeout(t);
+  t = setTimeout(() => {
+    const q = norm(idea.value);
+    if (q.length < 3) { verdict.textContent = ""; return; }
+    const hits = BUFFET.filter(b => { const w = norm(b.was); return w && (w.includes(q) || q.includes(w)); }).length;
+    const name = idea.value.trim();
+    const tipp = leastKat();
+    if (hits === 0) verdict.textContent = `${name}? Gibt es noch nicht – sehr gute Wahl!`;
+    else if (hits === 1) verdict.textContent = `${name} bringt schon jemand mit. Doppelt hält besser … oder?`;
+    else if (hits === 2) verdict.textContent = `Schon 2× ${name}. Wir sehen da ein Muster.`;
+    else verdict.textContent = `Schon ${hits}× ${name} – mutig. Wie wär's mit ${tipp}?`;
+  }, 250);
+});
+
+/* Der flüchtende Nein-Knopf */
+const no = document.getElementById("no"), box = document.getElementById("btns");
+const lines = ["Nein", "Sicher?", "Wirklich?", "Ganz sicher?", "Kathrin wäre traurig …", "Na gut. Schade!"];
+let tries = 0, curX = 0, curY = 0;
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+function flee(e) {
+  if (tries >= lines.length - 1) return;
+  e.preventDefault();
+  tries++;
+  no.textContent = lines[tries];
+  if (tries === lines.length - 1) { no.style.transform = "none"; return; }
+  const yes = document.getElementById("yes");
+  const bw = box.clientWidth, bh = box.clientHeight, w = no.offsetWidth, h = no.offsetHeight;
+  let x = 0, y = 0;
+  for (let i = 0; i < 30; i++) {
+    x = Math.random() * Math.max(0, bw - w); y = Math.random() * Math.max(0, bh - h);
+    const clear = x > yes.offsetLeft + yes.offsetWidth + 8 || x + w < yes.offsetLeft - 8 || y > yes.offsetTop + yes.offsetHeight + 8;
+    if (clear && Math.abs(x - no.offsetLeft - curX) + Math.abs(y - no.offsetTop - curY) > 60) break;
+  }
+  curX = x - no.offsetLeft; curY = y - no.offsetTop;
+  no.style.transform = reduce ? "none" : `translate(${curX}px, ${curY}px) rotate(${(Math.random() * 16 - 8).toFixed(1)}deg)`;
+}
+no.addEventListener("pointerenter", e => { if (e.pointerType === "mouse") flee(e); });
+no.addEventListener("click", flee);
+}
+</script>
+</body>
+</html>
