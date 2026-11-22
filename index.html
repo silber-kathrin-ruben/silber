@@ -67,7 +67,10 @@ h2{font:700 30px/1.1 Caveat,cursive;margin:22px 0 8px}
 .n{font-variant-numeric:tabular-nums;font-weight:800;text-align:right;min-width:1.5em}
 label{font-weight:800;display:block;margin:12px 0 6px}
 input{width:100%;min-height:48px;padding:10px 14px;border-radius:10px;border:2px solid var(--line);background:transparent;color:var(--ink);font:16px Nunito,sans-serif}
-.verdict{min-height:3em;margin:8px 0 0;font:600 22px/1.2 Caveat,cursive;color:var(--blue)}
+.verdict:empty{display:none}
+#idea ~ .small{margin-top:8px}
+.card a:not(.btn){color:var(--blue)}
+.verdict{margin:8px 0 4px;font:600 22px/1.2 Caveat,cursive;color:var(--blue)}
 :root[data-theme=dark] .verdict{color:#8fa6ff}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]) .verdict{color:#8fa6ff}}
 .stand{font-size:13px;color:var(--soft)}
@@ -99,7 +102,7 @@ input{width:100%;min-height:48px;padding:10px 14px;border-radius:10px;border:2px
     <a class="btn yes" id="yes" href="https://tally.so/r/o92dZV">Na klar.</a>
     <a class="btn no" id="no" href="https://tally.so/r/o92dZV">Nein</a>
   </div>
-  <p class="small">Kinder sind natürlich willkommen. Beide Knöpfe führen zum Anmeldeformular – dort trägst du Personenzahl und Buffet-Beitrag ein.</p>
+  <p class="small">Kinder sind willkommen. Beide Knöpfe führen zum Anmeldeformular – dort trägst du Personenzahl und Buffet-Beitrag ein.</p>
 
   <h2>Was schon aufs Buffet kommt</h2>
   <ul class="board" id="board"></ul>
