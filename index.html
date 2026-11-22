@@ -47,6 +47,9 @@ h1{font:700 clamp(40px,6vw,54px)/1.0 Caveat,cursive;margin:6px 0 4px;text-wrap:b
 :root[data-theme=dark] .sub{color:#8fa6ff}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]) .sub{color:#8fa6ff}}
 .facts{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:0 0 14px;padding:12px 0;border-block:2px dashed var(--line)}
+.when{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;margin:4px 0 14px;padding:12px 16px;border-radius:8px;background:var(--blue);color:#fff}
+.when .day{font:700 34px/1 Caveat,cursive}.when .date{font-weight:800;font-size:17px;white-space:nowrap}
+.deadline{font-size:15px;color:var(--soft);margin:-4px 0 6px}
 .facts dt{font-weight:800}.facts dd{margin:0}
 p{margin:0 0 12px}.small{font-size:14px;color:var(--soft)}
 h2{font:700 30px/1.1 Caveat,cursive;margin:22px 0 8px}
@@ -83,17 +86,17 @@ input{width:100%;min-height:48px;padding:10px 14px;border-radius:10px;border:2px
 <article class="card">
   <h1><span class="silver">Gerade noch Silber.</span></h1>
   <p class="sub">25 Jahre – 364 Tage.</p>
-  <p>An Neujahr sind wir 26 Jahre zusammen. Bevor das Silber offiziell abläuft, feiern wir den letzten Abend unseres Silberjahres – und den Jahreswechsel gleich mit. Am liebsten mit euch.<br><span class="sign">Kathrin und Ruben</span></p>
+  <p>Am 01. Januar 2027 sind wir 26 Jahre zusammen. Bevor es offiziell abläuft, feiern wir den letzten Abend unseres Silberjahres – und den Jahreswechsel gleich mit. Am liebsten mit euch.<br><span class="sign">Kathrin und Ruben</span></p>
+  <div class="when"><span class="day">Silvester</span><span class="date">Do, 31.12.2026 · ab 20 Uhr</span></div>
   <dl class="facts">
-    <dt>Wann</dt><dd>Donnerstag, 31.12.2026, ab 20 Uhr</dd>
-    <dt>Wo</dt><dd>Hannover-Südstadt – die genaue Adresse bekommst du nach deiner Zusage</dd>
-    <dt>Anmelden bis</dt><dd>Samstag, 12.12.2026</dd>
+    <dt>Wo</dt><dd>Hannover-Südstadt – bei uns zuhause. Die genaue Adresse steht im Zusage-Formular.</dd>
     <dt>Statt Geschenken</dt><dd>bringt jede und jeder etwas fürs gemeinsame Buffet mit</dd>
   </dl>
 
-  <h2>Kommst du?</h2>
+  <h2>Kommst du? Kommt ihr?</h2>
+  <p class="deadline">Bitte sagt uns bis spätestens <b>12. Dezember</b> Bescheid.</p>
   <div class="btns" id="btns">
-    <a class="btn yes" id="yes" href="https://tally.so/r/o92dZV">Ja, ich bin dabei!</a>
+    <a class="btn yes" id="yes" href="https://tally.so/r/o92dZV">Na klar.</a>
     <a class="btn no" id="no" href="https://tally.so/r/o92dZV">Nein</a>
   </div>
   <p class="small">Beide Knöpfe führen zum Anmeldeformular – dort trägst du Personenzahl und Buffet-Beitrag ein.</p>
