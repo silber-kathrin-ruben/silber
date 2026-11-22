@@ -5,7 +5,7 @@ from zoneinfo import ZoneInfo
 
 FORM = "o92dZV"
 KEY = os.environ["TALLY_API_KEY"]
-KATS = ["Salat", "Hauptgericht", "Fingerfood & Snacks", "Brot & Dips", "Nachtisch", "Getränke"]
+KATS = ["Salat", "Hauptgericht", "Fingerfood & Snacks", "Brot & Dips", "Nachtisch", "Viele Getränke", "Besondere Getränke"]
 
 def get(url):
     req = urllib.request.Request(url, headers={"Authorization": f"Bearer {KEY}", "User-Agent": "silber-buffet"})
@@ -49,6 +49,8 @@ for s in subs:
         continue
     kat = ans(s, "Was bringst du zum Buffet mit?")
     was = clean(ans(s, "Und was genau?"))
+    if kat == "Getränke":
+        kat = "Viele Getränke"  # frühe Anmeldungen vor der Aufteilung
     if kat in KATS:
         buffet.append({"kat": kat, "was": was})
 
