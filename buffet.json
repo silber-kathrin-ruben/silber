@@ -1,4 +1,9 @@
 {
- "stand": "22.11.2026, 23:03 Uhr",
- "buffet": []
+ "stand": "23.11.2026, 00:02 Uhr",
+ "buffet": [
+  {
+   "kat": "Besondere Getränke",
+   "was": "schnitzel"
+  }
+ ]
 }
